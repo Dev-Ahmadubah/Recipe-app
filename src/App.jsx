@@ -10,12 +10,12 @@ function App() {
       <Router>
         <nav className="flex items-center justify-between">
           <Link to="/" className="font-bold text-2xl text-gray-200">
-            Culgust
+            Culgust🍮
           </Link>
           <Search />
         </nav>
         <Category />
-        <Pages  />
+        <Pages />
       </Router>
     </div>
   );
