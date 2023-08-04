@@ -37,7 +37,7 @@ const Recipe = () => {
           </button>
 
           <button
-            className={activeTab === "ingredients" ? "active" : ""}
+            className={activeTab === "ingredients" ? "active" : " "}
             onClick={() => setActiveTab("ingredients")}
           >
             Ingredients
@@ -53,7 +53,11 @@ const Recipe = () => {
           {activeTab === "ingredients" && (
             <ul>
               {details?.extendedIngredients.map((ingredient) => {
-                return <li key={ingredient.id}>{ingredient.original}</li>;
+                return (
+                  <li className="text-gray-600" key={ingredient.id}>
+                    {ingredient.original}
+                  </li>
+                );
               })}
             </ul>
           )}

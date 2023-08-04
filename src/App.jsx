@@ -9,7 +9,7 @@ function App() {
     <div className="w-[70%] mx-auto ">
       <Router>
         <nav className="flex items-center justify-between">
-          <Link to="/" className="font-bold text-2xl text-gray-200">
+          <Link to="/" className="font-bold text-2xl text-gray-600">
             Culgust🍮
           </Link>
           <Search />

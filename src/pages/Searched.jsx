@@ -26,7 +26,7 @@ const Searched = () => {
           <Link to={`/recipe/${recipe.id}`}>
             <div key={recipe.id}>
               <img src={recipe.image} alt={recipe.title} />
-              <h4>{recipe.title}</h4>
+              <h4 className="text-gray-500">{recipe.title}</h4>
             </div>
           </Link>
         );
