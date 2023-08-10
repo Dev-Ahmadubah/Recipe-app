@@ -24,7 +24,7 @@ const Searched = () => {
       {searchedRecipe?.map((recipe) => {
         return (
           <Link to={`/recipe/${recipe.id}`}>
-            <div key={recipe.id}>
+            <div key={recipe.id} className="">
               <img src={recipe.image} alt={recipe.title} />
               <h4 className="text-gray-500">{recipe.title}</h4>
             </div>

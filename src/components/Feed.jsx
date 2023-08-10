@@ -33,7 +33,11 @@ const Feed = () => {
 
   return (
     <>
+   
+
+
       <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden py-6 sm:py-12">
+        <p>Popular</p>
         <div className="scrollbar-hide mt-14 flex w-full snap-x snap-mandatory scroll-px-10 gap-10 overflow-x-scroll scroll-smooth px-10">
           {list?.map((recipe) => {
             return (

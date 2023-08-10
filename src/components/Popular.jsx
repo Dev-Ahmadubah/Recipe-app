@@ -34,7 +34,7 @@ const Feed = () => {
 
   return (
     <>
-      <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden  py-6 sm:py-12">
+      {/* <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden  py-6 sm:py-12">
         <div className="scrollbar-hide mt-14 flex w-full snap-x snap-mandatory scroll-px-10 gap-10 overflow-x-scroll scroll-smooth px-10">
           {popular?.map((recipe) => {
             return (
@@ -59,6 +59,32 @@ const Feed = () => {
             );
           })}
         </div>
+      </div> */}
+
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+        {popular.map((recipe) => {
+          return (
+            <Link
+              to={`/recipe/${recipe.id}`}
+              key={recipe.id}
+              className="block rounded-lg p-4 shadow-sm shadow-indigo-100"
+            >
+              <img
+                alt="Home"
+                src={recipe.image}
+                className="h-56 w-full rounded-md object-cover"
+              />
+
+              <div className="mt-2">
+                <dl>
+                  <div>
+                    <dd className="font-medium">{recipe.title}</dd>
+                  </div>
+                </dl>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </>
   );
