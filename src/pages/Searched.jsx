@@ -20,18 +20,32 @@ const Searched = () => {
     getSearched(params.search);
   }, [params.search]);
   return (
-    <main>
-      {searchedRecipe?.map((recipe) => {
-        return (
-          <Link to={`/recipe/${recipe.id}`}>
-            <div key={recipe.id} className="">
-              <img src={recipe.image} alt={recipe.title} />
-              <h4 className="text-gray-500">{recipe.title}</h4>
-            </div>
-          </Link>
-        );
-      })}
+    <main className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 mt-4">
+       {searchedRecipe.map((recipe) => {
+          return (
+            <Link
+              to={`/recipe/${recipe.id}`}
+              key={recipe.id}
+              className="block rounded-lg p-4 shadow-sm shadow-indigo-100"
+            >
+              <img
+                alt="Home"
+                src={recipe.image}
+                className="h-56 w-full rounded-md object-cover"
+              />
+
+              <div className="mt-2">
+                <dl>
+                  <div>
+                    <dd className="font-medium mt-4">{recipe.title}</dd>
+                  </div>
+                </dl>
+              </div>
+            </Link>
+  );
+          })}
     </main>
+    
   );
 };
 

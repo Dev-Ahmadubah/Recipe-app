@@ -1,4 +1,4 @@
-import Category from "./components/Category";
+
 import Search from "./components/Search";
 import "./index.css";
 import Pages from "./pages/Pages";
@@ -14,7 +14,7 @@ function App() {
           </Link>
           <Search />
         </nav>
-        <Category />
+        
         <Pages />
       </Router>
     </div>

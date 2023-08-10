@@ -23,27 +23,27 @@ const Recipe = () => {
 
   return (
     <>
-      <section>
+      <section className="mb-10">
         <div>
           <h2>{details?.title}</h2>
-          <img src={details?.image} alt="" />
+          <img src={details?.image} alt="" className=" rounded-md object-cover" />
         </div>
         <div>
           <button
-            className={activeTab === "instructions" ? "active" : " "}
+            className={activeTab === "instructions" ? "active mr-4 mt-4 inline-block rounded border border-current px-8 py-3 text-sm font-medium text-indigo-600 transition hover:rotate-2 hover:scale-110 focus:outline-none focus:ring active:text-indigo-500" : "mt-4 rounded border px-8 py-3 mr-4"}
             onClick={() => setActiveTab("instructions")}
           >
             instructions
           </button>
 
           <button
-            className={activeTab === "ingredients" ? "active" : " "}
+            className={activeTab === "ingredients " ? "active inline-block rounded border border-current px-8 py-3 text-sm font-medium text-indigo-600 transition hover:rotate-2 hover:scale-110 focus:outline-none focus:ring active:text-indigo-500" : " "}
             onClick={() => setActiveTab("ingredients")}
           >
             Ingredients
           </button>
           {activeTab === "instructions" && (
-            <div>
+            <div className="max-w-[80ch] mt-4 text-sm text-gray-500">
               <p dangerouslySetInnerHTML={{ __html: details?.summary }}></p>
               <p
                 dangerouslySetInnerHTML={{ __html: details?.instructions }}

@@ -60,7 +60,7 @@ const Feed = () => {
           })}
         </div>
       </div> */}
-
+    <h1 className="font-semibold text-2xl my-4 text-gray-800">Your Feed</h1>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
         {popular.map((recipe) => {
           return (
@@ -78,7 +78,7 @@ const Feed = () => {
               <div className="mt-2">
                 <dl>
                   <div>
-                    <dd className="font-medium">{recipe.title}</dd>
+                    <dd className="font-medium mt-4">{recipe.title}</dd>
                   </div>
                 </dl>
               </div>
